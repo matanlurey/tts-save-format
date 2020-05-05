@@ -27,7 +27,9 @@ export async function compileSchemas(): Promise<string> {
   writeFile(
     '/* tslint:disable */\n/** Execute `npm run generate` to regenerate **/',
   );
-  for (const schema of fs.readdirSync(inSchema)) {
+  const schemaFiles = fs.readdirSync(inSchema);
+  schemaFiles.sort();
+  for (const schema of schemaFiles) {
     let out = await compileFromFile(path.join(inSchema, schema), {
       cwd: inSchema,
       declareExternallyReferenced: false,

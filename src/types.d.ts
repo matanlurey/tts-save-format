@@ -39,6 +39,16 @@ export interface CounterState {
   value: number;
 }
 
+/* Generated from CustomAssetState.json */
+
+export interface CustomAssetState {
+  Name: string;
+  /**
+   * URL or empty string
+   */
+  URL: string;
+}
+
 /* Generated from CustomAssetbundleState.json */
 
 export interface CustomAssetbundleState {
@@ -59,16 +69,6 @@ export interface CustomAssetbundleState {
    */
   TypeIndex: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
   LoopingEffectIndex: number;
-}
-
-/* Generated from CustomAssetState.json */
-
-export interface CustomAssetState {
-  Name: string;
-  /**
-   * URL or empty string
-   */
-  URL: string;
 }
 
 /* Generated from CustomDecalState.json */
@@ -264,6 +264,13 @@ export interface GridState {
   PosOffset?: VectorState;
 }
 
+/* Generated from HandTransformState.json */
+
+export interface HandTransformState {
+  Color: string;
+  Transform: TransformState;
+}
+
 /* Generated from HandsState.json */
 
 export interface HandsState {
@@ -274,13 +281,6 @@ export interface HandsState {
    */
   Hiding: 0 | 1 | 2;
   HandTransforms: HandTransformState[];
-}
-
-/* Generated from HandTransformState.json */
-
-export interface HandTransformState {
-  Color: string;
-  Transform: TransformState;
 }
 
 /* Generated from JointFixedState.json */
@@ -673,15 +673,6 @@ export interface SnapPointState {
   Rotation?: VectorState;
 }
 
-/* Generated from TabletState.json */
-
-export interface TabletState {
-  /**
-   * URL or empty string
-   */
-  PageURL: string;
-}
-
 /* Generated from TabState.json */
 
 export interface TabState {
@@ -690,6 +681,15 @@ export interface TabState {
   color: string;
   visibleColor: ColourState;
   id: number;
+}
+
+/* Generated from TabletState.json */
+
+export interface TabletState {
+  /**
+   * URL or empty string
+   */
+  PageURL: string;
 }
 
 /* Generated from TextState.json */
