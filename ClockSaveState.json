@@ -1,0 +1,25 @@
+{
+  "$id": "https://tts.swlegion.dev/ClockSaveState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "ClockSaveState",
+  "type": "object",
+
+  "properties": {
+    "ClockState": {},
+
+    "SecondsPassed": {
+      "type": "number",
+      "default": 0
+    },
+
+    "Paused": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["ClockState", "SecondsPassed", "Paused"]
+}

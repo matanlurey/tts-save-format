@@ -1,0 +1,193 @@
+{
+  "$id": "https://tts.swlegion.dev/SaveState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "SaveState",
+  "type": "object",
+
+  "properties": {
+    "SaveName": {
+      "type": "string",
+      "default": ""
+    },
+
+    "GameMode": {
+      "type": "string",
+      "default": ""
+    },
+
+    "Gravity": {
+      "type": "number",
+      "default": 0.5
+    },
+
+    "PlayArea": {
+      "type": "number",
+      "default": 0.5
+    },
+
+    "Date": {
+      "type": "string",
+      "default": ""
+    },
+
+    "Table": {
+      "type": "string",
+      "default": ""
+    },
+
+    "TableURL": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "URL or empty string"
+    },
+
+    "Sky": {
+      "type": "string",
+      "default": ""
+    },
+
+    "SkyURL": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "URL or empty string"
+    },
+
+    "Note": {
+      "type": "string",
+      "default": ""
+    },
+
+    "Rules": {
+      "type": "string",
+      "default": ""
+    },
+
+    "XmlUI": {
+      "type": "string",
+      "default": ""
+    },
+
+    "CustomUIAssets": {
+      "type": "array",
+      "items": {
+        "$ref": "./CustomAssetState.json"
+      }
+    },
+
+    "LuaScript": {
+      "type": "string",
+      "default": ""
+    },
+
+    "LuaScriptState": {
+      "type": "string",
+      "default": ""
+    },
+
+    "Grid": {
+      "$ref": "./GridState.json",
+      "description": "Grid menu settings."
+    },
+
+    "Lighting": {
+      "$ref": "./LightingState.json",
+      "description": "Lighting menu settings."
+    },
+
+    "Hands": {
+      "$ref": "./HandsState.json",
+      "description": "Hand menu settings and hand positions."
+    },
+
+    "Turns": {
+      "$ref": "./TurnsState.json",
+      "description": "Turn menu settings."
+    },
+
+    "VectorLines": {
+      "type": "array",
+      "items": {
+        "$ref": "./VectorLineState.json"
+      },
+      "description": "Vector lines on canvas 0 (table + beyond)."
+    },
+
+    "ObjectStates": {
+      "type": "array",
+      "items": {
+        "$ref": "./ObjectState.json"
+      },
+      "description": "Objects on the table."
+    },
+
+    "SnapPoints": {
+      "type": "array",
+      "items": {
+        "$ref": "./SnapPointState.json"
+      },
+      "description": "Snap points not attached to objects."
+    },
+
+    "DecalPallet": {
+      "type": "array",
+      "items": {
+        "$ref": "./CustomDecalState.json"
+      },
+      "description": "Decals that can be placed in the world."
+    },
+
+    "Decals": {
+      "type": "array",
+      "items": {
+        "$ref": "./DecalState.json"
+      },
+      "description": "Decals not attached to objects."
+    },
+
+    "TabStates": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "./TabState.json"
+      },
+      "description": "Notepad tabs"
+    },
+
+    "CameraStates": {
+      "type": "array",
+      "items": {
+        "anyOf": [{ "$ref": "./CameraState.json" }, { "type": "null" }]
+      },
+      "description": "Saved camera positions."
+    },
+
+    "VersionNumber": {
+      "type": "string",
+      "default": ""
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "SaveName",
+    "GameMode",
+    "Gravity",
+    "PlayArea",
+    "Date",
+    "Table",
+    "Sky",
+    "Rules",
+    "XmlUI",
+    "LuaScript",
+    "LuaScriptState",
+    "Grid",
+    "Lighting",
+    "Hands",
+    "Turns",
+    "ObjectStates",
+    "DecalPallet",
+    "TabStates",
+    "VersionNumber"
+  ]
+}

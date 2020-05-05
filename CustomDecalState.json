@@ -1,0 +1,27 @@
+{
+  "$id": "https://tts.swlegion.dev/CustomDecalState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomDecalState",
+  "type": "object",
+
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+
+    "ImageURL": {
+      "type": "string",
+      "description": "URL or empty string"
+    },
+
+    "Size": {
+      "type": "number",
+      "description": "Size in inches."
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Name", "ImageURL"]
+}

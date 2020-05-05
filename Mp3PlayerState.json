@@ -1,0 +1,53 @@
+{
+  "$id": "https://tts.swlegion.dev/Mp3PlayerState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "Mp3PlayerState",
+  "type": "object",
+
+  "properties": {
+    "songTitle": {
+      "type": "string",
+      "default": ""
+    },
+
+    "genre": {
+      "type": "string",
+      "default": ""
+    },
+
+    "volume": {
+      "type": "number",
+      "default": 0.5
+    },
+
+    "isPlaying": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "loopOne": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "menuTitle": {
+      "type": "string",
+      "default": "GENRES"
+    },
+
+    "menu": {}
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "songTitle",
+    "genre",
+    "volume",
+    "isPlaying",
+    "loopOne",
+    "menuTitle",
+    "menu"
+  ]
+}

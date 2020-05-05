@@ -1,0 +1,75 @@
+{
+  "$id": "https://tts.swlegion.dev/CustomMeshState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomMeshState",
+  "type": "object",
+
+  "properties": {
+    "MeshURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "DiffuseURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "NormalURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "ColliderURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "Convex": {
+      "type": "boolean",
+      "default": true
+    },
+
+    "MaterialIndex": {
+      "type": "number",
+      "default": 0,
+      "enum": [0, 1, 2, 3],
+      "description": "0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard"
+    },
+
+    "TypeIndex": {
+      "type": "number",
+      "default": 0,
+      "enum": [0, 1, 2, 3, 4, 5, 6, 7],
+      "description": "0 = Generic, 1 = Figurine, 2 = Dice, 3 = Coin, 4 = Board, 5 = Chip, 6 = Bag, 7 = Infinite"
+    },
+
+    "CustomShader": {
+      "$ref": "./CustomShaderState.json",
+      "description": "Used to override the shader."
+    },
+
+    "CastShadows": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "MeshURL",
+    "DiffuseURL",
+    "NormalURL",
+    "ColliderURL",
+    "Convex",
+    "MaterialIndex",
+    "TypeIndex",
+    "CastShadows"
+  ]
+}

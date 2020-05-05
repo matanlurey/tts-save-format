@@ -1,0 +1,336 @@
+{
+  "$id": "https://tts.swlegion.dev/ObjectState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "ObjectState",
+  "type": "object",
+
+  "properties": {
+    "Name": {
+      "type": "string",
+      "default": "",
+      "description": "Internal object name."
+    },
+
+    "Transform": {
+      "$ref": "./TransformState.json",
+      "description": "Position, Rotation, Scale."
+    },
+
+    "Nickname": {
+      "type": "string",
+      "default": "",
+      "description": "Name supplied in game."
+    },
+
+    "Description": {
+      "type": "string",
+      "default": ""
+    },
+
+    "GMNotes": {
+      "type": "string",
+      "default": ""
+    },
+
+    "IgnoreFoW": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "ColorDiffuse": {
+      "$ref": "./ColourState.json",
+      "description": "Material color tint."
+    },
+
+    "Locked": {
+      "type": "boolean",
+      "default": false,
+      "description": "Freeze object in place."
+    },
+
+    "Grid": {
+      "type": "boolean",
+      "default": true,
+      "description": "Object will snap to grid."
+    },
+
+    "Snap": {
+      "type": "boolean",
+      "default": true,
+      "description": "Object will snap to snap points"
+    },
+
+    "Autoraise": {
+      "type": "boolean",
+      "default": true,
+      "description": "Object will raise above others and avoid collision."
+    },
+
+    "Sticky": {
+      "type": "boolean",
+      "default": true,
+      "description": "When picked up objects above this one will be attached to it."
+    },
+
+    "Tooltip": {
+      "type": "boolean",
+      "default": true,
+      "description": "When hovering object will display tooltips."
+    },
+
+    "GridProjection": {
+      "type": "boolean",
+      "default": false,
+      "description": "Grid will project on this object."
+    },
+
+    "HideWhenFaceDown": {
+      "type": ["boolean", "null"],
+      "description": "When face down object is question mark hidden."
+    },
+
+    "Hands": {
+      "type": ["boolean", "null"],
+      "description": "Object will enter player hands."
+    },
+
+    "AltSound": {
+      "type": ["boolean", "null"],
+      "description": "Some objects have 2 materials, with two sound sets."
+    },
+
+    "MaterialIndex": {
+      "type": ["number", "null"],
+      "description": "Some objects can have multiple materials."
+    },
+
+    "MeshIndex": {
+      "type": ["number", "null"],
+      "description": "Some objects can have multiple meshes."
+    },
+
+    "Layer": {
+      "type": ["number", "null"],
+      "description": "Sound Layer."
+    },
+
+    "Number": {
+      "type": ["number", "null"]
+    },
+
+    "CardID": {
+      "type": ["number", "null"]
+    },
+
+    "SidewaysCard": {
+      "type": ["boolean", "null"]
+    },
+
+    "RPGmode": {
+      "type": ["boolean", "null"]
+    },
+
+    "RPGdead": {
+      "type": ["boolean", "null"]
+    },
+
+    "FogColor": {
+      "type": ["string", "null"],
+      "default": null
+    },
+
+    "FogHidePointers": {
+      "type": ["boolean", "null"]
+    },
+
+    "FogReverseHiding": {
+      "type": ["boolean", "null"]
+    },
+
+    "FogSeethrough": {
+      "type": ["boolean", "null"]
+    },
+
+    "DeckIDs": {
+      "items": {
+        "type": "number"
+      },
+      "type": ["array", "null"]
+    },
+
+    "CustomDeck": {
+      "additionalProperties": {
+        "$ref": "./CustomDeckState.json"
+      },
+      "type": "object",
+      "description": "Key matches the hundreth place of the id (ex. id = 354, index = 3)."
+    },
+
+    "CustomMesh": {
+      "$ref": "./CustomMeshState.json"
+    },
+
+    "CustomImage": {
+      "$ref": "./CustomImageState.json"
+    },
+
+    "CustomAssetbundle": {
+      "$ref": "./CustomAssetbundleState.json"
+    },
+
+    "FogOfWar": {
+      "$ref": "./FogOfWarSaveState.json"
+    },
+
+    "FogOfWarRevealer": {
+      "$ref": "./FogOfWarRevealerSaveState.json"
+    },
+
+    "Clock": {
+      "$ref": "./ClockSaveState.json"
+    },
+
+    "Counter": {
+      "$ref": "./CounterState.json"
+    },
+
+    "Tablet": {
+      "$ref": "./TabletState.json"
+    },
+
+    "Mp3Player": {
+      "$ref": "./Mp3PlayerState.json"
+    },
+
+    "Calculator": {
+      "$ref": "./CalculatorState.json"
+    },
+
+    "Text": {
+      "$ref": "./TextState.json"
+    },
+
+    "XmlUI": {
+      "type": "string",
+      "default": "",
+      "description": "Custom Xml UI."
+    },
+
+    "CustomUIAssets": {
+      "type": "array",
+      "items": {
+        "$ref": "./CustomAssetState.json"
+      }
+    },
+
+    "LuaScript": {
+      "type": "string",
+      "default": ""
+    },
+
+    "LuaScriptState": {
+      "type": "string",
+      "default": "",
+      "description": "Serialized running Lua code."
+    },
+
+    "ContainedObjects": {
+      "type": "array",
+      "items": {
+        "$ref": "./ObjectState.json"
+      },
+      "description": "Objects inside this one."
+    },
+
+    "PhysicsMaterial": {
+      "$ref": "./PhysicsMaterialState.json",
+      "description": "Use to modify the physics material (friction, bounce, etc.) http://docs.unity3d.com/Manual/class-PhysicMaterial.html."
+    },
+
+    "Rigidbody": {
+      "$ref": "./RigidbodyState.json",
+      "description": "Use to modify the physical properties (mass, drag, etc) http://docs.unity3d.com/Manual/class-Rigidbody.html."
+    },
+
+    "JointFixed": {
+      "$ref": "./JointFixedState.json",
+      "description": "Joints can be used to attached/link objects together check the classes below."
+    },
+
+    "JointHinge": {
+      "$ref": "./JointHingeState.json"
+    },
+
+    "JointSpring": {
+      "$ref": "./JointSpringState.json"
+    },
+
+    "GUID": {
+      "type": "string",
+      "description": ""
+    },
+
+    "AttachedSnapPoints": {
+      "type": "array",
+      "items": {
+        "$ref": "./SnapPointState.json"
+      },
+      "description": "Snap points that are stuck to this object, happens when placing a snap point on a locked object."
+    },
+
+    "AttachedVectorLines": {
+      "type": "array",
+      "items": {
+        "$ref": "./VectorLineState.json"
+      },
+      "description": "Vector lines that are stuck to this object, happens when drawing a vector line on a locked object."
+    },
+
+    "AttachedDecals": {
+      "type": "array",
+      "items": {
+        "$ref": "./DecalState.json"
+      },
+      "description": "Decals that are attached to this objects."
+    },
+
+    "States": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "./ObjectState.json"
+      },
+      "description": "Objects can have multiple states which can be swapped between."
+    },
+
+    "RotationValues": {
+      "type": "array",
+      "item": {
+        "$ref": "./RotationValueState.json"
+      },
+      "description": "Rotation values are tooltip values tied to rotations."
+    },
+
+    "CustomPDF": {
+      "$comment": "Undocumented"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "Name",
+    "Transform",
+    "Nickname",
+    "Description",
+    "GMNotes",
+    "IgnoreFoW",
+    "ColorDiffuse",
+    "Locked",
+    "Grid",
+    "Snap",
+    "Autoraise",
+    "Sticky",
+    "Tooltip"
+  ]
+}

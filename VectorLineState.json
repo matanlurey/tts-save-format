@@ -1,0 +1,41 @@
+{
+  "$id": "https://tts.swlegion.dev/VectorLineState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "VectorLineState",
+  "type": "object",
+
+  "properties": {
+    "points3": {
+      "items": {
+        "$ref": "./VectorState.json"
+      },
+      "type": "array"
+    },
+
+    "color": {
+      "$ref": "./ColourState.json"
+    },
+
+    "thickness": {
+      "type": "number",
+      "default": 0.1
+    },
+
+    "rotation": {
+      "$ref": "./VectorState.json"
+    },
+
+    "loop": {
+      "type": ["boolean", "null"]
+    },
+
+    "square": {
+      "type": ["boolean", "null"]
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["points3", "color", "thickness", "rotation"]
+}

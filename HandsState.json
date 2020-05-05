@@ -1,0 +1,37 @@
+{
+  "$id": "https://tts.swlegion.dev/HandsState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "HandsState",
+  "type": "object",
+
+  "properties": {
+    "Enable": {
+      "type": "boolean",
+      "default": true
+    },
+
+    "DisableUnused": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "Hiding": {
+      "type": "number",
+      "enum": [0, 1, 2],
+      "default": 0,
+      "description": "0 = Default = only owner can see, 1 = Reverse = opposite of default, 2 = Disable = hiding is disabled."
+    },
+
+    "HandTransforms": {
+      "items": {
+        "$ref": "./HandTransformState.json"
+      },
+      "type": "array"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Enable", "DisableUnused", "Hiding", "HandTransforms"]
+}

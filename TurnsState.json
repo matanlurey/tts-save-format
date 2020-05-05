@@ -1,0 +1,60 @@
+{
+  "$id": "https://tts.swlegion.dev/TurnsState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "TurnsState",
+  "type": "object",
+
+  "properties": {
+    "Enable": {
+      "type": "boolean"
+    },
+
+    "Type": {
+      "type": "number",
+      "enum": [0, 1],
+      "default": 0,
+      "description": "0 = Auto = turn order is based on positioning of hands on around table, 1 = Custom = turn order is based on an user color list."
+    },
+
+    "TurnOrder": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+
+    "Reverse": {
+      "type": "boolean"
+    },
+
+    "SkipEmpty": {
+      "type": "boolean"
+    },
+
+    "DisableInteractions": {
+      "type": "boolean"
+    },
+
+    "PassTurns": {
+      "type": "boolean",
+      "default": true
+    },
+
+    "TurnColor": {
+      "type": "string"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "Enable",
+    "Type",
+    "TurnOrder",
+    "Reverse",
+    "SkipEmpty",
+    "PassTurns",
+    "TurnColor"
+  ]
+}

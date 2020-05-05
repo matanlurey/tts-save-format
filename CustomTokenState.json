@@ -1,0 +1,26 @@
+{
+  "$id": "https://tts.swlegion.dev/CustomTokenState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomTokenState",
+  "type": "object",
+
+  "properties": {
+    "Thickness": {
+      "type": "number"
+    },
+
+    "MergeDistancePixels": {
+      "type": "number"
+    },
+
+    "Stackable": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Thickness", "MergeDistancePixels", "Stackable"]
+}

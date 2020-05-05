@@ -1,0 +1,12 @@
+{
+  "$id": "https://tts.swlegion.dev/JointFixedState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "JointFixedState",
+  "type": "object",
+  "description": "http://docs.unity3d.com/ScriptReference/FixedJoint.html",
+
+  "allOf": [{ "$ref": "./JointState.json" }],
+
+  "additionalProperties": false
+}

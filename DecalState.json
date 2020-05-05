@@ -1,0 +1,21 @@
+{
+  "$id": "https://tts.swlegion.dev/DecalState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "DecalState",
+  "type": "object",
+
+  "properties": {
+    "Transform": {
+      "$ref": "./TransformState.json"
+    },
+
+    "CustomDecal": {
+      "$ref": "./CustomDecalState.json"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Transform", "CustomDecal"]
+}

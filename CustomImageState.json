@@ -1,0 +1,48 @@
+{
+  "$id": "https://tts.swlegion.dev/CustomImageState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomImageState",
+  "type": "object",
+
+  "properties": {
+    "ImageURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "ImageSecondaryURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "WidthScale": {
+      "type": "number",
+      "description": "Holds the scaled size of the object based on the image dimensions."
+    },
+
+    "CustomDice": {
+      "$ref": "./CustomDiceState.json"
+    },
+
+    "CustomToken": {
+      "$ref": "./CustomTokenState.json"
+    },
+
+    "CustomJigsawPuzzle": {
+      "$ref": "./CustomJigsawPuzzleState.json"
+    },
+
+    "CustomTile": {
+      "$ref": "./CustomTileState.json"
+    },
+
+    "ImageScalar": {}
+  },
+
+  "additionalProperties": false,
+
+  "required": ["ImageURL", "ImageSecondaryURL"]
+}

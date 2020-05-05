@@ -1,0 +1,19 @@
+{
+  "$id": "https://tts.swlegion.dev/OrientationState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "OrientationState",
+  "type": "object",
+
+  "properties": {
+    "position": {
+      "$ref": "./VectorState.json"
+    },
+
+    "rotation": {}
+  },
+
+  "additionalProperties": false,
+
+  "required": ["position", "rotation"]
+}

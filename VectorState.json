@@ -1,0 +1,25 @@
+{
+  "$id": "https://tts.swlegion.dev/VectorState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "VectorState",
+  "type": "object",
+
+  "properties": {
+    "x": {
+      "type": "number"
+    },
+
+    "y": {
+      "type": "number"
+    },
+
+    "z": {
+      "type": "number"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["x", "y", "z"]
+}

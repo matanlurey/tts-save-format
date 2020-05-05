@@ -1,0 +1,45 @@
+{
+  "$id": "https://tts.swlegion.dev/CustomDeckState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomDeckState",
+  "type": "object",
+
+  "properties": {
+    "FaceURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "BackURL": {
+      "type": "string",
+      "default": "",
+      "description": "URL or empty string"
+    },
+
+    "NumWidth": {
+      "type": ["number", "null"]
+    },
+
+    "NumHeight": {
+      "type": ["number", "null"]
+    },
+
+    "BackIsHidden": {
+      "type": "boolean",
+      "default": false,
+      "description": "Back of cards becames the hidden card when in a hand."
+    },
+
+    "UniqueBack": {
+      "type": "boolean",
+      "default": false,
+      "description": "Each back is a unique card just like the front."
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["FaceURL", "BackURL", "BackIsHidden", "UniqueBack"]
+}

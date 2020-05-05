@@ -1,0 +1,95 @@
+{
+  "$id": "https://tts.swlegion.dev/GridState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "GridState",
+  "type": "object",
+
+  "properties": {
+    "Type": {
+      "type": "number",
+      "enum": [0, 1, 2],
+      "default": 0,
+      "description": "0 = Box, 1 = Horizontal, 2 = HexVertical"
+    },
+
+    "Lines": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "Color": {
+      "$ref": "./ColourState.json",
+      "default": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      }
+    },
+
+    "Opacity": {
+      "type": "number",
+      "default": 0.75,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Alpha opacity."
+    },
+
+    "ThickLines": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "Snapping": {
+      "type": "boolean",
+      "default": false,
+      "description": "Line snapping."
+    },
+
+    "Offset": {
+      "type": "boolean",
+      "default": false,
+      "description": "Center snapping."
+    },
+
+    "BothSnapping": {
+      "type": "boolean",
+      "default": false,
+      "description": "Boths snapping."
+    },
+
+    "xSize": {
+      "type": "number",
+      "default": 2
+    },
+
+    "ySize": {
+      "type": "number",
+      "default": 2
+    },
+
+    "PosOffset": {
+      "$ref": "./VectorState.json",
+      "default": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      }
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "Type",
+    "Lines",
+    "Color",
+    "Opacity",
+    "ThickLines",
+    "Snapping",
+    "Offset",
+    "BothSnapping",
+    "xSize",
+    "ySize"
+  ]
+}

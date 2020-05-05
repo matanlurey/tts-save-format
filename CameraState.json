@@ -1,0 +1,30 @@
+{
+  "$id": "https://tts.swlegion.dev/CameraState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CameraState",
+  "type": "object",
+
+  "properties": {
+    "Position": {
+      "$ref": "./VectorState.json"
+    },
+
+    "Rotation": {
+      "$ref": "./VectorState.json"
+    },
+
+    "Distance": {
+      "type": "number"
+    },
+
+    "Zoomed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Position", "Rotation", "Distance", "Zoomed"]
+}

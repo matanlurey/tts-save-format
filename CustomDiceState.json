@@ -1,0 +1,15 @@
+{
+  "$id": "https://tts.swlegion.dev/CustomDiceState.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomDiceState",
+  "type": "object",
+
+  "properties": {
+    "Type": {}
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Type"]
+}
