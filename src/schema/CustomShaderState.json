@@ -1,0 +1,41 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/CustomShaderState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomShaderState",
+  "type": "object",
+
+  "properties": {
+    "SpecularColor": {
+      "$ref": "./ColourState.json"
+    },
+
+    "SpecularIntensity": {
+      "type": "number",
+      "default": 0.1
+    },
+
+    "SpecularSharpness": {
+      "type": "number",
+      "default": 3,
+      "minimum": 2,
+      "maximum": 8
+    },
+
+    "FresnelStrength": {
+      "type": "number",
+      "default": 0.1,
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "SpecularColor",
+    "SpecularIntensity",
+    "SpecularSharpness",
+    "FresnelStrength"
+  ]
+}

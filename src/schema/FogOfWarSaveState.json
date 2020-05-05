@@ -1,0 +1,30 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/FogOfWarSaveState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "FogOfWarSaveState",
+  "type": "object",
+
+  "properties": {
+    "HideGmPointer": {
+      "type": "boolean"
+    },
+
+    "HideObjects": {
+      "type": "boolean"
+    },
+
+    "Height": {
+      "type": "number"
+    },
+
+    "RevealedLocations": {
+      "description": "Dictionary<string, HashSet<int>",
+      "type": "object"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["HideGmPointer", "HideObjects", "Height", "RevealedLocations"]
+}

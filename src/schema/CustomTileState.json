@@ -1,0 +1,34 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/CustomTileState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomTileState",
+  "type": "object",
+
+  "properties": {
+    "Type": {
+      "type": "number",
+      "default": 0,
+      "enum": [0, 1, 2, 3],
+      "description": "0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard"
+    },
+
+    "Thickness": {
+      "type": "number"
+    },
+
+    "Stackable": {
+      "type": "boolean",
+      "default": false
+    },
+
+    "Stretch": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Type", "Thickness", "Stackable", "Stretch"]
+}

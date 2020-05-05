@@ -1,0 +1,23 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/CalculatorState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CalculatorState",
+  "type": "object",
+
+  "properties": {
+    "value": {
+      "type": "string",
+      "default": ""
+    },
+
+    "memory": {
+      "type": "number",
+      "default": 0
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["value", "memory"]
+}

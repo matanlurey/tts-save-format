@@ -1,0 +1,48 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/JointHingeState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "JointHingeState",
+  "type": "object",
+  "description": "http://docs.unity3d.com/ScriptReference/HingeJoint.html",
+
+  "additionalProperties": false,
+
+  "properties": {
+    "UseLimits": {
+      "type": "boolean"
+    },
+
+    "Limits": {
+      "description": "Limit of angular rotation on the hinge joint. http://docs.unity3d.com/ScriptReference/JointLimits.html.",
+      "type": "object"
+    },
+
+    "UseMotor": {
+      "type": "boolean"
+    },
+
+    "Motor": {
+      "description": "Limit of angular rotation on the hinge joint. The motor will apply a force up to a maximum force to achieve the target velocity in degrees per second. http://docs.unity3d.com/ScriptReference/JointMotor.html.",
+      "type": "object"
+    },
+
+    "UseSpring": {
+      "type": "boolean"
+    },
+
+    "Spring": {
+      "description": "The spring attempts to reach a target angle by adding spring and damping forces. http://docs.unity3d.com/ScriptReference/JointSpring.html.",
+      "type": "object"
+    }
+  },
+
+  "required": [
+    "UseLimits",
+    "Limits",
+    "UseMotor",
+    "Motor",
+    "UseSpring",
+    "Spring"
+  ]
+}

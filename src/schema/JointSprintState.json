@@ -1,0 +1,34 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/JointSprintState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "JointSpringState",
+  "type": "object",
+  "description": "http://docs.unity3d.com/ScriptReference/SpringJoint.html",
+
+  "additionalProperties": false,
+
+  "properties": {
+    "Damper": {
+      "description": "The damper force used to dampen the spring force",
+      "type": "number"
+    },
+
+    "MaxDistance": {
+      "description": "The maximum distance between the bodies relative to their initial distance.",
+      "type": "number"
+    },
+
+    "MinDistance": {
+      "description": "The minimum distance between the bodies relative to their initial distance.",
+      "type": "number"
+    },
+
+    "Spring": {
+      "description": "The spring force used to keep the two objects together.",
+      "type": "number"
+    }
+  },
+
+  "required": ["Damper", "MaxDistance", "MinDistance", "Spring"]
+}

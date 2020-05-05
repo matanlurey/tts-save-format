@@ -1,0 +1,19 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/TabletState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "TabletState",
+  "type": "object",
+
+  "properties": {
+    "PageURL": {
+      "type": "string",
+      "default": "",
+      "format": "uri"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["PageURL"]
+}
