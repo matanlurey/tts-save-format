@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/GridState",
+  "$id": "https://schema.swlegion.dev/tts/GridState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "GridState",
@@ -7,9 +7,10 @@
 
   "properties": {
     "Type": {
-      "type": "string",
-      "enum": ["Box", "Horizontal", "HexVertical"],
-      "default": "Box"
+      "type": "number",
+      "enum": [0, 1, 2],
+      "default": 0,
+      "description": "0 = Box, 1 = Horizontal, 2 = HexVertical"
     },
 
     "Lines": {
@@ -67,7 +68,7 @@
       "default": 2
     },
 
-    "PosOffsest": {
+    "PosOffset": {
       "$ref": "./VectorState.json",
       "default": {
         "x": 0,
@@ -89,7 +90,6 @@
     "Offset",
     "BothSnapping",
     "xSize",
-    "ySize",
-    "PosOffest"
+    "ySize"
   ]
 }

@@ -9,9 +9,6 @@
     // typechecking of packages that use an older module format.
     "esModuleInterop": true,
 
-    // Emit compiled files into another directory.
-    "outDir": "dist",
-
     // Require checked-in TypeScript code to pass a higher bar/be consistent.
     "strict": true,
 
@@ -20,6 +17,13 @@
     "module": "CommonJS"
   },
 
-  "include": ["generate.ts", "src/**/*.json", "src/**/*.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": [
+    "src/**/*.json",
+    "src/**/*.ts",
+    "test/**/*.json",
+    "test/**/*.ts",
+    "tool/**/*.json",
+    "tool/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
 }

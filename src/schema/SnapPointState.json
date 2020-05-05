@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/SnapPointState",
+  "$id": "https://schema.swlegion.dev/tts/SnapPointState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "SnapPointState",
@@ -17,5 +17,5 @@
 
   "additionalProperties": false,
 
-  "required": ["Position", "Rotation"]
+  "required": ["Position"]
 }

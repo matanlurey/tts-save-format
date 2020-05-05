@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/CustomDecalState",
+  "$id": "https://schema.swlegion.dev/tts/CustomDecalState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "CustomDecalState",
@@ -12,7 +12,7 @@
 
     "ImageURL": {
       "type": "string",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Size": {

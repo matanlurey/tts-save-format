@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/CustomMeshState",
+  "$id": "https://schema.swlegion.dev/tts/CustomMeshState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "CustomMeshState",
@@ -9,25 +9,25 @@
     "MeshURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "DiffuseURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "NormalURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
-    "CollideURL": {
+    "ColliderURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Convex": {
@@ -70,7 +70,6 @@
     "Convex",
     "MaterialIndex",
     "TypeIndex",
-    "CustomShader",
     "CastShadows"
   ]
 }

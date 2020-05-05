@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/ColourState",
+  "$id": "https://schema.swlegion.dev/tts/ColourState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "ColourState",
@@ -15,6 +15,10 @@
     },
 
     "b": {
+      "type": "number"
+    },
+
+    "a": {
       "type": "number"
     }
   },

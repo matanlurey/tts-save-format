@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/SaveState",
+  "$id": "https://schema.swlegion.dev/tts/SaveState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "SaveState",
@@ -39,7 +39,7 @@
     "TableURL": {
       "type": ["string", "null"],
       "default": null,
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Sky": {
@@ -50,7 +50,7 @@
     "SkyURL": {
       "type": ["string", "null"],
       "default": null,
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Note": {
@@ -156,7 +156,7 @@
     "CameraStates": {
       "type": "array",
       "items": {
-        "$ref": "./CameraState.json"
+        "anyOf": [{ "$ref": "./CameraState.json" }, { "type": "null" }]
       },
       "description": "Saved camera positions."
     },
@@ -176,26 +176,18 @@
     "PlayArea",
     "Date",
     "Table",
-    "TableURL",
     "Sky",
-    "SkyURL",
-    "Notes",
     "Rules",
     "XmlUI",
-    "CustomUIAssets",
     "LuaScript",
     "LuaScriptState",
     "Grid",
     "Lighting",
     "Hands",
     "Turns",
-    "VectorLines",
     "ObjectStates",
-    "SnapPoints",
     "DecalPallet",
-    "Decals",
     "TabStates",
-    "CameraStates",
     "VersionNumber"
   ]
 }

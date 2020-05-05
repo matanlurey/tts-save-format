@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/TabletState",
+  "$id": "https://schema.swlegion.dev/tts/TabletState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "TabletState",
@@ -9,7 +9,7 @@
     "PageURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     }
   },
 

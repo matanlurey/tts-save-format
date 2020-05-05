@@ -1,21 +1,21 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/CustomAssetBundleState",
+  "$id": "https://schema.swlegion.dev/tts/CustomAssetbundleState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
-  "title": "CustomAssetBundleState",
+  "title": "CustomAssetbundleState",
   "type": "object",
 
   "properties": {
     "AssetbundleURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "AssetbundleSecondaryURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "MaterialIndex": {

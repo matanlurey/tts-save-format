@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/ObjectState",
+  "$id": "https://schema.swlegion.dev/tts/ObjectState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "ObjectState",
@@ -26,6 +26,16 @@
     "Description": {
       "type": "string",
       "default": ""
+    },
+
+    "GMNotes": {
+      "type": "string",
+      "default": ""
+    },
+
+    "IgnoreFoW": {
+      "type": "boolean",
+      "default": false
     },
 
     "ColorDiffuse": {
@@ -95,7 +105,7 @@
       "description": "Some objects can have multiple materials."
     },
 
-    "MehsIndex": {
+    "MeshIndex": {
       "type": ["number", "null"],
       "description": "Some objects can have multiple meshes."
     },
@@ -299,6 +309,10 @@
         "$ref": "./RotationValueState.json"
       },
       "description": "Rotation values are tooltip values tied to rotations."
+    },
+
+    "CustomPDF": {
+      "$comment": "Undocumented"
     }
   },
 
@@ -309,13 +323,14 @@
     "Transform",
     "Nickname",
     "Description",
+    "GMNotes",
+    "IgnoreFoW",
     "ColorDiffuse",
     "Locked",
     "Grid",
     "Snap",
     "Autoraise",
     "Sticky",
-    "Tooltip",
-    "GridProtection"
+    "Tooltip"
   ]
 }

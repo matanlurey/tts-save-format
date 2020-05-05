@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/FogOfWarRevealerSaveState",
+  "$id": "https://schema.swlegion.dev/tts/FogOfWarRevealerSaveState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "FogOfWarRevealerSaveState",

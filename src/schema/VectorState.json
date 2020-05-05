@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/VectorState",
+  "$id": "https://schema.swlegion.dev/tts/VectorState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "VectorState",
