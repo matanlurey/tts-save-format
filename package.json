@@ -3,18 +3,17 @@
   "version": "0.1.0",
   "description": "Interfaces for Tabletop Simulator's save file format",
   "scripts": {
-    "build": "tsc",
     "fix": "prettier --write . --ignore-path .gitignore && eslint --fix src/** --ext .json,.ts",
-    "generate": "ts-node generate.ts",
+    "generate": "ts-node tool/generate.ts --output src/types.d.ts",
     "lint": "prettier --ignore-path .gitignore --list-different src && eslint src/** --ext .json,.ts",
-    "test": "jest"
+    "test": "jest",
+    "validate": "ajv -d \"test/saves/sample.json\" -s \"src/schema/SaveState.json\" -r \"src/schema/**/*.json\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matanlurey/tts-save-files.git"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.d.ts",
   "author": "Matan Lurey",
   "keywords": [
     "Tabletop",
@@ -25,8 +24,10 @@
   "devDependencies": {
     "@types/fs-extra": "^8.1.0",
     "@types/jest": "^25.2.1",
+    "@types/minimist": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
+    "ajv-cli": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
@@ -35,6 +36,7 @@
     "fs-extra": "^9.0.0",
     "jest": "^25.5.4",
     "json-schema-to-typescript": "^9.0.1",
+    "minimist": "^1.2.5",
     "prettier": "^2.0.5",
     "ts-jest": "^25.4.0",
     "ts-node": "^8.9.1",

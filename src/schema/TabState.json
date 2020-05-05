@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/TabState",
+  "$id": "https://schema.swlegion.dev/tts/TabState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "TabState",

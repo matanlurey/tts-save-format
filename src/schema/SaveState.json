@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/SaveState",
+  "$id": "https://schema.swlegion.dev/tts/SaveState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "SaveState",
@@ -176,26 +176,18 @@
     "PlayArea",
     "Date",
     "Table",
-    "TableURL",
     "Sky",
-    "SkyURL",
-    "Notes",
     "Rules",
     "XmlUI",
-    "CustomUIAssets",
     "LuaScript",
     "LuaScriptState",
     "Grid",
     "Lighting",
     "Hands",
     "Turns",
-    "VectorLines",
     "ObjectStates",
-    "SnapPoints",
     "DecalPallet",
-    "Decals",
     "TabStates",
-    "CameraStates",
     "VersionNumber"
   ]
 }

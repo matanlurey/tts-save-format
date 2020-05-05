@@ -1,8 +1,8 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/HandsState",
+  "$id": "https://schema.swlegion.dev/tts/LightingState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
-  "title": "HandsState",
+  "title": "LightingState",
   "type": "object",
 
   "properties": {
@@ -30,10 +30,10 @@
     },
 
     "AmbientType": {
-      "type": "string",
-      "enum": ["Background", "Gradient"],
-      "default": "Background",
-      "description": "Background = ambient light comes from the background, Gradient = ambient light comes from the three ambient colors."
+      "type": "number",
+      "enum": [0, 1],
+      "default": 0,
+      "description": "0 = Background = ambient light comes from the background, 1 = Gradient = ambient light comes from the three ambient colors."
     },
 
     "AmbientSkyColor": {
@@ -100,7 +100,6 @@
     "AmbientGroundColor",
     "ReflectionIntensity",
     "LutIndex",
-    "LutContribution",
-    "LutURL"
+    "LutContribution"
   ]
 }

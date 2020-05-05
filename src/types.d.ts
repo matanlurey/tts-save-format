@@ -1,6 +1,5 @@
 /* tslint:disable */
 /** Execute `npm run generate` to regenerate **/
-
 /* Generated from CalculatorState.json */
 
 export interface CalculatorState {
@@ -39,9 +38,9 @@ export interface CounterState {
   value: number;
 }
 
-/* Generated from CustomAssetBundleState.json */
+/* Generated from CustomAssetbundleState.json */
 
-export interface CustomAssetBundleState {
+export interface CustomAssetbundleState {
   AssetbundleURL: string;
   AssetbundleSecondaryURL: string;
   /**
@@ -199,7 +198,10 @@ export interface FogOfWarSaveState {
 /* Generated from GridState.json */
 
 export interface GridState {
-  Type: 'Box' | 'Horizontal' | 'HexVertical';
+  /**
+   * 0 = Box, 1 = Horizontal, 2 = HexVertical
+   */
+  Type: 0 | 1 | 2;
   Lines: boolean;
   Color: ColourState;
   /**
@@ -221,7 +223,7 @@ export interface GridState {
   BothSnapping: boolean;
   xSize: number;
   ySize: number;
-  PosOffsest?: VectorState;
+  PosOffset?: VectorState;
 }
 
 /* Generated from HandsState.json */
@@ -230,9 +232,9 @@ export interface HandsState {
   Enable: boolean;
   DisableUnused: boolean;
   /**
-   * Default = only owner can see, Reverse = opposite of default, Disable = hiding is disabled.
+   * 0 = Default = only owner can see, 1 = Reverse = opposite of default, 2 = Disable = hiding is disabled.
    */
-  Hiding: 'Default' | 'Reverse' | 'Disable';
+  Hiding: 0 | 1 | 2;
   HandTransforms: HandTransformState[];
 }
 
@@ -331,14 +333,14 @@ export interface JointState {
 
 /* Generated from LightingState.json */
 
-export interface HandsState {
+export interface LightingState {
   LightIntensity: number;
   LightColor: ColourState;
   AmbientIntensity: number;
   /**
-   * Background = ambient light comes from the background, Gradient = ambient light comes from the three ambient colors.
+   * 0 = Background = ambient light comes from the background, 1 = Gradient = ambient light comes from the three ambient colors.
    */
-  AmbientType: 'Background' | 'Gradient';
+  AmbientType: 0 | 1;
   AmbientSkyColor: ColourState;
   AmbientEquatorColor: ColourState;
   AmbientGroundColor: ColourState;
@@ -348,7 +350,7 @@ export interface HandsState {
   /**
    * LUT 256x16
    */
-  LutURL: string;
+  LutURL?: string;
 }
 
 /* Generated from Mp3PlayerState.json */
@@ -376,6 +378,8 @@ export interface ObjectState {
    */
   Nickname: string;
   Description: string;
+  GMNotes: string;
+  IgnoreFoW: boolean;
   ColorDiffuse: ColourState;
   /**
    * Freeze object in place.
@@ -424,7 +428,7 @@ export interface ObjectState {
   /**
    * Some objects can have multiple meshes.
    */
-  MehsIndex?: number | null;
+  MeshIndex?: number | null;
   /**
    * Sound Layer.
    */
@@ -447,7 +451,7 @@ export interface ObjectState {
   };
   CustomMesh?: CustomMeshState;
   CustomImage?: CustomImageState;
-  CustomAssetbundle?: CustomAssetBundleState;
+  CustomAssetbundle?: CustomAssetbundleState;
   FogOfWar?: FogOfWarSaveState;
   FogOfWarRevealer?: FogOfWarRevealerSaveState;
   Clock?: ClockSaveState;
@@ -470,7 +474,7 @@ export interface ObjectState {
    * Objects inside this one.
    */
   ContainedObjects?: ObjectState[];
-  PhysicsMaterial?: CustomDiceState;
+  PhysicsMaterial?: PhysicsMaterialState;
   Rigidbody?: RigidbodyState;
   JointFixed?: JointFixedState;
   JointHinge?: JointHingeState;
@@ -509,7 +513,7 @@ export interface OrientationState {
 
 /* Generated from PhysicsMaterialState.json */
 
-export interface CustomDiceState {
+export interface PhysicsMaterialState {
   /**
    * The friction used when an object is laying still on a surface. Usually a value from 0 to 1. A value of zero feels like ice, a value of 1 will make it very hard to get the object moving.
    */
@@ -569,23 +573,23 @@ export interface SaveState {
   PlayArea: number;
   Date: string;
   Table: string;
-  TableURL: string | null;
+  TableURL?: string | null;
   Sky: string;
-  SkyURL: string | null;
+  SkyURL?: string | null;
   Note?: string;
   Rules: string;
   XmlUI: string;
-  CustomUIAssets: CustomAssetState[];
+  CustomUIAssets?: CustomAssetState[];
   LuaScript: string;
   LuaScriptState: string;
   Grid: GridState;
-  Lighting: HandsState;
+  Lighting: LightingState;
   Hands: HandsState;
   Turns: TurnsState;
   /**
    * Vector lines on canvas 0 (table + beyond).
    */
-  VectorLines: VectorLineState[];
+  VectorLines?: VectorLineState[];
   /**
    * Objects on the table.
    */
@@ -593,7 +597,7 @@ export interface SaveState {
   /**
    * Snap points not attached to objects.
    */
-  SnapPoints: SnapPointState[];
+  SnapPoints?: SnapPointState[];
   /**
    * Decals that can be placed in the world.
    */
@@ -601,7 +605,7 @@ export interface SaveState {
   /**
    * Decals not attached to objects.
    */
-  Decals: DecalState[];
+  Decals?: DecalState[];
   /**
    * Notepad tabs
    */
@@ -611,7 +615,7 @@ export interface SaveState {
   /**
    * Saved camera positions.
    */
-  CameraStates: CameraState[];
+  CameraStates?: CameraState[];
   VersionNumber: string;
 }
 
@@ -665,9 +669,9 @@ export interface TransformState {
 export interface TurnsState {
   Enable: boolean;
   /**
-   * Auto = turn order is based on positioning of hands on around table, Custom = turn order is based on an user color list.
+   * 0 = Auto = turn order is based on positioning of hands on around table, 1 = Custom = turn order is based on an user color list.
    */
-  Type: 'Auto' | 'Customs';
+  Type: 0 | 1;
   TurnOrder: string[];
   Reverse: boolean;
   SkipEmpty: boolean;

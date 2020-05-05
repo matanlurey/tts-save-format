@@ -1,8 +1,8 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/CustomDiceState",
+  "$id": "https://schema.swlegion.dev/tts/PhysicsMaterialState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
-  "title": "CustomDiceState",
+  "title": "PhysicsMaterialState",
   "type": "object",
 
   "properties": {

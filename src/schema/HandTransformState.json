@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/HandTransformState",
+  "$id": "https://schema.swlegion.dev/tts/HandTransformState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "HandTransformState",
