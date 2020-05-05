@@ -15,5 +15,15 @@
     // Support super() call.
     "target": "ES6",
     "module": "CommonJS"
-  }
+  },
+
+  "include": [
+    "src/**/*.json",
+    "src/**/*.ts",
+    "test/**/*.json",
+    "test/**/*.ts",
+    "tool/**/*.json",
+    "tool/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
 }

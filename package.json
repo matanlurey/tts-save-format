@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "TypeScript Definitions and JSON Schema for Tabletop Simulator's",
   "scripts": {
-    "fix": "prettier --write . --ignore-path .gitignore && eslint --fix src/** --ext .json,.ts",
+    "fix": "prettier --write . --ignore-path .gitignore && eslint --fix src test tool --ext .json,.ts",
     "generate": "ts-node tool/generate.ts --output src/types.d.ts",
-    "lint": "prettier --ignore-path .gitignore --list-different src && eslint src/** --ext .json,.ts",
+    "lint": "prettier --ignore-path .gitignore --list-different src && eslint src test tool --ext .json,.ts",
     "test": "jest",
     "validate": "ajv -d \"test/saves/*.json\" -s \"src/schema/SaveState.json\" -r \"src/schema/**/*.json\""
   },
