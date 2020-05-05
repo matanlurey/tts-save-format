@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/ClockSaveState.json",
+  "$id": "https://tts.swlegion.dev/ClockSaveState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "ClockSaveState",

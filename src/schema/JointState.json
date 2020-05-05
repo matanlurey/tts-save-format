@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/JointState.json",
+  "$id": "https://tts.swlegion.dev/JointState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "JointState",
