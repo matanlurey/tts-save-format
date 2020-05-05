@@ -7,7 +7,7 @@
     "generate": "ts-node tool/generate.ts --output src/types.d.ts",
     "lint": "prettier --ignore-path .gitignore --list-different src && eslint src/** --ext .json,.ts",
     "test": "jest",
-    "validate": "ajv -d \"test/saves/sample.json\" -s \"src/schema/SaveState.json\" -r \"src/schema/**/*.json\""
+    "validate": "ajv -d \"test/saves/*.json\" -s \"src/schema/SaveState.json\" -r \"src/schema/**/*.json\""
   },
   "repository": {
     "type": "git",

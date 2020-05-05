@@ -39,7 +39,7 @@
     "TableURL": {
       "type": ["string", "null"],
       "default": null,
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Sky": {
@@ -50,7 +50,7 @@
     "SkyURL": {
       "type": ["string", "null"],
       "default": null,
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Note": {
@@ -156,7 +156,7 @@
     "CameraStates": {
       "type": "array",
       "items": {
-        "$ref": "./CameraState.json"
+        "anyOf": [{ "$ref": "./CameraState.json" }, { "type": "null" }]
       },
       "description": "Saved camera positions."
     },

@@ -16,6 +16,10 @@
 
     "b": {
       "type": "number"
+    },
+
+    "a": {
+      "type": "number"
     }
   },
 

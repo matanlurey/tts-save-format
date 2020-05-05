@@ -9,13 +9,13 @@
     "AssetbundleURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "AssetbundleSecondaryURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "MaterialIndex": {

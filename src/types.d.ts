@@ -19,9 +19,9 @@ export interface CameraState {
 /* Generated from ClockSaveState.json */
 
 export interface ClockSaveState {
-  ClockState?: unknown;
-  SecondsPassed?: number;
-  Paused?: boolean;
+  ClockState: unknown;
+  SecondsPassed: number;
+  Paused: boolean;
 }
 
 /* Generated from ColourState.json */
@@ -30,6 +30,7 @@ export interface ColourState {
   r: number;
   g: number;
   b: number;
+  a?: number;
 }
 
 /* Generated from CounterState.json */
@@ -41,7 +42,13 @@ export interface CounterState {
 /* Generated from CustomAssetbundleState.json */
 
 export interface CustomAssetbundleState {
+  /**
+   * URL or empty string
+   */
   AssetbundleURL: string;
+  /**
+   * URL or empty string
+   */
   AssetbundleSecondaryURL: string;
   /**
    * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard
@@ -58,6 +65,9 @@ export interface CustomAssetbundleState {
 
 export interface CustomAssetState {
   Name: string;
+  /**
+   * URL or empty string
+   */
   URL: string;
 }
 
@@ -65,6 +75,9 @@ export interface CustomAssetState {
 
 export interface CustomDecalState {
   Name: string;
+  /**
+   * URL or empty string
+   */
   ImageURL: string;
   /**
    * Size in inches.
@@ -75,7 +88,13 @@ export interface CustomDecalState {
 /* Generated from CustomDeckState.json */
 
 export interface CustomDeckState {
+  /**
+   * URL or empty string
+   */
   FaceURL: string;
+  /**
+   * URL or empty string
+   */
   BackURL: string;
   NumWidth?: number | null;
   NumHeight?: number | null;
@@ -98,16 +117,23 @@ export interface CustomDiceState {
 /* Generated from CustomImageState.json */
 
 export interface CustomImageState {
+  /**
+   * URL or empty string
+   */
   ImageURL: string;
+  /**
+   * URL or empty string
+   */
   ImageSecondaryURL: string;
   /**
    * Holds the scaled size of the object based on the image dimensions.
    */
-  WidthScale: string;
-  CustomDice: CustomDiceState;
-  CustomToken: CustomTokenState;
-  CustomJigsawPuzzle: CustomJigsawPuzzleState;
-  CustomTitle?: CustomTileState;
+  WidthScale?: number;
+  CustomDice?: CustomDiceState;
+  CustomToken?: CustomTokenState;
+  CustomJigsawPuzzle?: CustomJigsawPuzzleState;
+  CustomTile?: CustomTileState;
+  ImageScalar?: unknown;
 }
 
 /* Generated from CustomJigsawPuzzleState.json */
@@ -120,10 +146,22 @@ export interface CustomJigsawPuzzleState {
 /* Generated from CustomMeshState.json */
 
 export interface CustomMeshState {
+  /**
+   * URL or empty string
+   */
   MeshURL: string;
+  /**
+   * URL or empty string
+   */
   DiffuseURL: string;
+  /**
+   * URL or empty string
+   */
   NormalURL: string;
-  CollideURL?: string;
+  /**
+   * URL or empty string
+   */
+  ColliderURL: string;
   Convex: boolean;
   /**
    * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard
@@ -133,7 +171,7 @@ export interface CustomMeshState {
    * 0 = Generic, 1 = Figurine, 2 = Dice, 3 = Coin, 4 = Board, 5 = Chip, 6 = Bag, 7 = Infinite
    */
   TypeIndex: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
-  CustomShader: CustomShaderState;
+  CustomShader?: CustomShaderState;
   CastShadows: boolean;
 }
 
@@ -502,6 +540,9 @@ export interface ObjectState {
    * Rotation values are tooltip values tied to rotations.
    */
   RotationValues?: unknown[];
+  CustomPDF?: {
+    [k: string]: unknown;
+  };
 }
 
 /* Generated from OrientationState.json */
@@ -573,8 +614,14 @@ export interface SaveState {
   PlayArea: number;
   Date: string;
   Table: string;
+  /**
+   * URL or empty string
+   */
   TableURL?: string | null;
   Sky: string;
+  /**
+   * URL or empty string
+   */
   SkyURL?: string | null;
   Note?: string;
   Rules: string;
@@ -615,7 +662,7 @@ export interface SaveState {
   /**
    * Saved camera positions.
    */
-  CameraStates?: CameraState[];
+  CameraStates?: (CameraState | null)[];
   VersionNumber: string;
 }
 
@@ -623,12 +670,15 @@ export interface SaveState {
 
 export interface SnapPointState {
   Position: VectorState;
-  Rotation: VectorState;
+  Rotation?: VectorState;
 }
 
 /* Generated from TabletState.json */
 
 export interface TabletState {
+  /**
+   * URL or empty string
+   */
   PageURL: string;
 }
 

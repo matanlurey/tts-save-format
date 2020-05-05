@@ -83,7 +83,6 @@
 
     "LutURL": {
       "type": "string",
-      "format": "uri",
       "description": "LUT 256x16"
     }
   },

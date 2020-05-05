@@ -9,18 +9,17 @@
     "ImageURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "ImageSecondaryURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "WidthScale": {
-      "type": "string",
-      "default": "",
+      "type": "number",
       "description": "Holds the scaled size of the object based on the image dimensions."
     },
 
@@ -36,20 +35,14 @@
       "$ref": "./CustomJigsawPuzzleState.json"
     },
 
-    "CustomTitle": {
+    "CustomTile": {
       "$ref": "./CustomTileState.json"
-    }
+    },
+
+    "ImageScalar": {}
   },
 
   "additionalProperties": false,
 
-  "required": [
-    "ImageURL",
-    "ImageSecondaryURL",
-    "WidthScale",
-    "CustomDice",
-    "CustomToken",
-    "CustomJigsawPuzzle",
-    "CustomTile"
-  ]
+  "required": ["ImageURL", "ImageSecondaryURL"]
 }

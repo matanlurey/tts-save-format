@@ -9,13 +9,13 @@
     "FaceURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "BackURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "NumWidth": {

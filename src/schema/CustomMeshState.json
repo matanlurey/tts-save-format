@@ -9,25 +9,25 @@
     "MeshURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "DiffuseURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "NormalURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
-    "CollideURL": {
+    "ColliderURL": {
       "type": "string",
       "default": "",
-      "format": "uri"
+      "description": "URL or empty string"
     },
 
     "Convex": {
@@ -70,7 +70,6 @@
     "Convex",
     "MaterialIndex",
     "TypeIndex",
-    "CustomShader",
     "CastShadows"
   ]
 }

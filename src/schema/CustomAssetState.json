@@ -12,7 +12,7 @@
 
     "URL": {
       "type": "string",
-      "format": "uri"
+      "description": "URL or empty string"
     }
   },
 

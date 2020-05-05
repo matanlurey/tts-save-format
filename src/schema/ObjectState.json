@@ -309,6 +309,10 @@
         "$ref": "./RotationValueState.json"
       },
       "description": "Rotation values are tooltip values tied to rotations."
+    },
+
+    "CustomPDF": {
+      "$comment": "Undocumented"
     }
   },
 
