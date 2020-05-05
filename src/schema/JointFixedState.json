@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/JointFixedState.json",
+  "$id": "https://tts.swlegion.dev/JointFixedState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "JointFixedState",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/JointHingeState.json",
+  "$id": "https://tts.swlegion.dev/JointHingeState.json",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "JointHingeState",
