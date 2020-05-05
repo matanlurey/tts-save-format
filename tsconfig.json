@@ -20,6 +20,6 @@
     "module": "CommonJS"
   },
 
-  "include": ["src/**/*.json", "src/**/*.ts"],
+  "include": ["generate.ts", "src/**/*.json", "src/**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }
