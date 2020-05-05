@@ -1,7 +1,7 @@
 {
   "name": "@matanlurey/tts-save-files",
   "version": "0.1.0",
-  "description": "Interfaces for Tabletop Simulator's save file format",
+  "description": "TypeScript Definitions and JSON Schema for Tabletop Simulator's",
   "scripts": {
     "fix": "prettier --write . --ignore-path .gitignore && eslint --fix src/** --ext .json,.ts",
     "generate": "ts-node tool/generate.ts --output src/types.d.ts",
@@ -11,14 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matanlurey/tts-save-files.git"
+    "url": "git+https://github.com/matanlurey/tts-save-format.git"
   },
   "main": "src/index.d.ts",
   "author": "Matan Lurey",
   "keywords": [
     "Tabletop",
     "Simulator",
-    "TTS"
+    "TTS",
+    "Typings",
+    "Types",
+    "Schema"
   ],
   "license": "MIT",
   "devDependencies": {
