@@ -507,11 +507,7 @@
       "HideWhenFaceDown": true,
       "Hands": false,
       "SidewaysCard": false,
-      "DeckIDs": [
-        18,
-        41,
-        35
-      ],
+      "DeckIDs": [18, 41, 35],
       "LuaScriptState": "",
       "GUID": "9857b5",
       "ContainedObjects": [
