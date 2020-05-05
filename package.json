@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "fix": "prettier --write . --ignore-path .gitignore && eslint --fix src/** test/**",
-    "generate": "json2ts -i src/schema/*.json -o src/types",
+    "generate": "json2ts src/schema/*.json --cwd src/schema -o src/types",
     "lint": "prettier --ignore-path .gitignore --list-different src test && eslint src/** test/**",
     "test": "jest"
   },

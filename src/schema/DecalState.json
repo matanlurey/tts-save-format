@@ -7,7 +7,7 @@
 
   "properties": {
     "Transform": {
-      "$ref": "./TransfsormState.json"
+      "$ref": "./TransformState.json"
     },
 
     "CustomDecal": {

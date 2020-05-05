@@ -1,5 +1,5 @@
 {
-  "$id": "https://schema.swlegion.dev/tts/JointSprintState",
+  "$id": "https://schema.swlegion.dev/tts/JointSpringState",
   "$schema": "http://json-schema.org/draft-07/schema",
 
   "title": "JointSpringState",

@@ -11,7 +11,7 @@
     },
 
     "colorstate": {
-      "$ref": "./ColourState.jsson"
+      "$ref": "./ColourState.json"
     },
 
     "fontSize": {

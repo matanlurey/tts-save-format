@@ -36,9 +36,7 @@
       "default": "GENRES"
     },
 
-    "menu": {
-      "$ref": "./Menus.json"
-    }
+    "menu": {}
   },
 
   "additionalProperties": false,

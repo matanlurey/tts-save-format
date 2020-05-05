@@ -33,7 +33,7 @@
     },
 
     "CustomJigsawPuzzle": {
-      "$ref": "./CustomJigsawPuzleState.json"
+      "$ref": "./CustomJigsawPuzzleState.json"
     },
 
     "CustomTitle": {

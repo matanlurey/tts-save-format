@@ -5,7 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface CalculatorState {
-  value: string;
-  memory: number;
+export interface VectorState {
+  x: number;
+  y: number;
+  z: number;
 }

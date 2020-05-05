@@ -6,9 +6,7 @@
   "type": "object",
 
   "properties": {
-    "DiceType": {
-      "$ref": "./DiceType.json"
-    }
+    "Type": {}
   },
 
   "additionalProperties": false,
