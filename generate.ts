@@ -12,11 +12,15 @@ fs.writeFileSync(
 
 (async (): Promise<void> => {
   for (const schema of fs.readdirSync(inSchema)) {
-    const out = await compileFromFile(path.join(inSchema, schema), {
+    let out = await compileFromFile(path.join(inSchema, schema), {
       cwd: inSchema,
       declareExternallyReferenced: false,
+      bannerComment: `/* Generated from ${schema} */`,
     });
-    // out = out.replace(/\d*\b;/g, '');
-    fs.appendFileSync(outTypes, out);
+    // Some of the referenced types are suffixed with numbers, probably due to
+    // not canonicalizing references in the schema. This is a huge hack, but
+    // is probably stable - it removes trailing numbers in identifiers.
+    out = out.replace(/([a-zA-Z])(\d*)(\b;|\[)/g, '$1$3');
+    fs.appendFileSync(outTypes, `\n${out}`);
   }
 })();
