@@ -96,7 +96,7 @@
     },
 
     "Hands": {
-      "$ref": "./HandsStatae.json",
+      "$ref": "./HandsState.json",
       "description": "Hand menu settings and hand positions."
     },
 
