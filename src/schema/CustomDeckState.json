@@ -19,11 +19,11 @@
     },
 
     "NumWidth": {
-      "type": "number"
+      "type": ["number", "null"]
     },
 
     "NumHeight": {
-      "type": "number"
+      "type": ["number", "null"]
     },
 
     "BackIsHidden": {

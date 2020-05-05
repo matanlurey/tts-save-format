@@ -1,0 +1,22 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/CustomAssetState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "CustomAssetState",
+  "type": "object",
+
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+
+    "URL": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Name", "URL"]
+}

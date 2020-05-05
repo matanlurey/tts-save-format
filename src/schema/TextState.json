@@ -1,0 +1,26 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/TextState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "TextState",
+  "type": "object",
+
+  "properties": {
+    "Text": {
+      "type": "string"
+    },
+
+    "colorstate": {
+      "$ref": "./ColourState.jsson"
+    },
+
+    "fontSize": {
+      "type": "number",
+      "default": 64
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Text", "colorstate", "fontSize"]
+}

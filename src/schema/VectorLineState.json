@@ -9,7 +9,8 @@
     "points3": {
       "items": {
         "$ref": "./VectorState.json"
-      }
+      },
+      "type": "array"
     },
 
     "color": {
@@ -26,11 +27,11 @@
     },
 
     "loop": {
-      "type": "boolean"
+      "type": ["boolean", "null"]
     },
 
     "square": {
-      "type": "boolean"
+      "type": ["boolean", "null"]
     }
   },
 

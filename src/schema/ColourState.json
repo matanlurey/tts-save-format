@@ -1,0 +1,25 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/ColourState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "ColourState",
+  "type": "object",
+
+  "properties": {
+    "r": {
+      "type": "number"
+    },
+
+    "g": {
+      "type": "number"
+    },
+
+    "b": {
+      "type": "number"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["r", "g", "b"]
+}

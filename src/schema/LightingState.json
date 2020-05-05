@@ -1,0 +1,106 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/HandsState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "HandsState",
+  "type": "object",
+
+  "properties": {
+    "LightIntensity": {
+      "type": "number",
+      "default": 0.54,
+      "minimum": 0,
+      "maximum": 8
+    },
+
+    "LightColor": {
+      "$ref": "./ColourState.json",
+      "default": {
+        "r": 1,
+        "g": 0.9804,
+        "b": 0.8902
+      }
+    },
+
+    "AmbientIntensity": {
+      "type": "number",
+      "default": 1.3,
+      "minimum": 0,
+      "maximum": 8
+    },
+
+    "AmbientType": {
+      "type": "string",
+      "enum": ["Background", "Gradient"],
+      "default": "Background",
+      "description": "Background = ambient light comes from the background, Gradient = ambient light comes from the three ambient colors."
+    },
+
+    "AmbientSkyColor": {
+      "$ref": "./ColourState.json",
+      "default": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
+      }
+    },
+
+    "AmbientEquatorColor": {
+      "$ref": "./ColourState.json",
+      "default": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
+      }
+    },
+
+    "AmbientGroundColor": {
+      "$ref": "./ColourState.json",
+      "default": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
+      }
+    },
+
+    "ReflectionIntensity": {
+      "type": "number",
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "LutIndex": {
+      "type": "number"
+    },
+
+    "LutContribution": {
+      "type": "number",
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "LutURL": {
+      "type": "string",
+      "format": "uri",
+      "description": "LUT 256x16"
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": [
+    "LightIntensity",
+    "LightColor",
+    "AmbientIntensity",
+    "AmbientType",
+    "AmbientSkyColor",
+    "AmbientEquatorColor",
+    "AmbientGroundColor",
+    "ReflectionIntensity",
+    "LutIndex",
+    "LutContribution",
+    "LutURL"
+  ]
+}

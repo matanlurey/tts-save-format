@@ -1,0 +1,37 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/RigidbodyState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "RigidbodyState",
+  "type": "object",
+
+  "properties": {
+    "Mass": {
+      "type": "number",
+      "default": 1,
+      "description": "The mass of the object (arbitrary units). You should not make masses more or less than 100 times that of other Rigidbodies."
+    },
+
+    "Drag": {
+      "type": "number",
+      "default": 0.1,
+      "description": "How much air resistance affects the object when moving from forces. 0 means no air resistance, and infinity makes the object stop moving immediately."
+    },
+
+    "AngularDrag": {
+      "type": "number",
+      "default": 0.1,
+      "description": "How much air resistance affects the object when rotating from torque. 0 means no air resistance. Note that you cannot make the object stop rotating just by setting its Angular Drag to infinity."
+    },
+
+    "UseGravity": {
+      "type": "boolean",
+      "default": true,
+      "description": "If enabled, the object is affected by gravity."
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["Mass", "Drag", "AngularDrag", "UseGravity"]
+}

@@ -1,0 +1,34 @@
+{
+  "$id": "https://schema.swlegion.dev/tts/TabState",
+  "$schema": "http://json-schema.org/draft-07/schema",
+
+  "title": "TabState",
+  "type": "object",
+
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+
+    "body": {
+      "type": "string"
+    },
+
+    "color": {
+      "type": "string"
+    },
+
+    "visibleColor": {
+      "$ref": "./ColourState.json"
+    },
+
+    "id": {
+      "type": "number",
+      "default": -1
+    }
+  },
+
+  "additionalProperties": false,
+
+  "required": ["title", "body", "color", "visibleColor", "id"]
+}
