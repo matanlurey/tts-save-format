@@ -30,6 +30,9 @@ export async function compileSchemas(): Promise<string> {
   const schemaFiles = fs.readdirSync(inSchema);
   schemaFiles.sort();
   for (const schema of schemaFiles) {
+    if (!schema.endsWith('.json')) {
+      continue;
+    }
     let out = await compileFromFile(path.join(inSchema, schema), {
       cwd: inSchema,
       declareExternallyReferenced: false,
