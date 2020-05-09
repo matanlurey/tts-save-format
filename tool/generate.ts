@@ -4,20 +4,20 @@ import minimist from 'minimist';
 import * as path from 'path';
 import prettier from 'prettier';
 
-const inSchema = path.join('src', 'schema');
-const outTypes = path.join('src', 'types.d.ts');
-
 const argv = minimist(process.argv.slice(2));
+
+const inSchema = path.join('src', 'schema');
+const outTypes = argv.output;
 
 let output = '';
 
-const writeFile = argv.output
+const writeFile = outTypes
   ? (text: string): void => fs.writeFileSync(outTypes, text)
   : (text: string): void => {
       output = `${text}`;
     };
 
-const appendFile = argv.output
+const appendFile = outTypes
   ? (text: string): void => fs.appendFileSync(outTypes, text)
   : (text: string): void => {
       output += text;

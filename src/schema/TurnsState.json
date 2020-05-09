@@ -54,7 +54,6 @@
     "TurnOrder",
     "Reverse",
     "SkipEmpty",
-    "PassTurns",
-    "TurnColor"
+    "PassTurns"
   ]
 }

@@ -727,7 +727,7 @@ export interface TurnsState {
   SkipEmpty: boolean;
   DisableInteractions?: boolean;
   PassTurns: boolean;
-  TurnColor: string;
+  TurnColor?: string;
 }
 
 /* Generated from VectorLineState.json */
