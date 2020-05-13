@@ -61,9 +61,9 @@ export interface CustomAssetbundleState {
    */
   AssetbundleSecondaryURL: string;
   /**
-   * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard
+   * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass
    */
-  MaterialIndex: 0 | 1 | 2 | 3;
+  MaterialIndex: 0 | 1 | 2 | 3 | 4;
   /**
    * 0 = Generic, 1 = Figurine, 2 = Dice, 3 = Coin, 4 = Board, 5 = Chip, 6 = Bag, 7 = Infinite
    */
@@ -164,9 +164,9 @@ export interface CustomMeshState {
   ColliderURL: string;
   Convex: boolean;
   /**
-   * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard
+   * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass
    */
-  MaterialIndex: 0 | 1 | 2 | 3;
+  MaterialIndex: 0 | 1 | 2 | 3 | 4;
   /**
    * 0 = Generic, 1 = Figurine, 2 = Dice, 3 = Coin, 4 = Board, 5 = Chip, 6 = Bag, 7 = Infinite
    */
@@ -460,9 +460,9 @@ export interface ObjectState {
    */
   AltSound?: boolean | null;
   /**
-   * Some objects can have multiple materials.
+   * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass
    */
-  MaterialIndex?: number | null;
+  MaterialIndex?: 0 | 1 | 2 | 3 | 4;
   /**
    * Some objects can have multiple meshes.
    */

@@ -101,8 +101,10 @@
     },
 
     "MaterialIndex": {
-      "type": ["number", "null"],
-      "description": "Some objects can have multiple materials."
+      "type": "number",
+      "default": 0,
+      "enum": [0, 1, 2, 3, 4],
+      "description": "0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass"
     },
 
     "MeshIndex": {
