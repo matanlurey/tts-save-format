@@ -64,7 +64,7 @@ export interface CustomAssetbundleState {
   /**
    * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass
    */
-  MaterialIndex: 0 | 1 | 2 | 3 | 4;
+  MaterialIndex: -1 | 0 | 1 | 2 | 3 | 4;
   /**
    * 0 = Generic, 1 = Figurine, 2 = Dice, 3 = Coin, 4 = Board, 5 = Chip, 6 = Bag, 7 = Infinite
    */
@@ -167,7 +167,7 @@ export interface CustomMeshState {
   /**
    * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass
    */
-  MaterialIndex: 0 | 1 | 2 | 3 | 4;
+  MaterialIndex: -1 | 0 | 1 | 2 | 3 | 4;
   /**
    * 0 = Generic, 1 = Figurine, 2 = Dice, 3 = Coin, 4 = Board, 5 = Chip, 6 = Bag, 7 = Infinite
    */
@@ -463,7 +463,7 @@ export interface ObjectState {
   /**
    * 0 = Plastic, 1 = Wood, 2 = Metal, 3 = Cardboard, 4 = Glass
    */
-  MaterialIndex?: 0 | 1 | 2 | 3 | 4;
+  MaterialIndex?: -1 | 0 | 1 | 2 | 3 | 4;
   /**
    * Some objects can have multiple meshes.
    */
