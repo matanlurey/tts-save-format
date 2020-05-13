@@ -14,6 +14,7 @@ export interface CameraState {
   Rotation: VectorState;
   Distance: number;
   Zoomed: boolean;
+  AbsolutePosition?: VectorState;
 }
 
 /* Generated from ClockSaveState.json */
