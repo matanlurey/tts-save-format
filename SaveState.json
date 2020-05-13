@@ -164,7 +164,9 @@
     "VersionNumber": {
       "type": "string",
       "default": ""
-    }
+    },
+
+    "MusicPlayer": {}
   },
 
   "additionalProperties": false,
