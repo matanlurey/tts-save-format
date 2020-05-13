@@ -664,6 +664,7 @@ export interface SaveState {
    */
   CameraStates?: (CameraState | null)[];
   VersionNumber: string;
+  MusicPlayer?: unknown;
 }
 
 /* Generated from SnapPointState.json */
