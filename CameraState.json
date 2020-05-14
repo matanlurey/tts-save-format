@@ -21,6 +21,10 @@
     "Zoomed": {
       "type": "boolean",
       "default": false
+    },
+
+    "AbsolutePosition": {
+      "$ref": "./VectorState.json"
     }
   },
 
