@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/matanlurey/tts-save-format.git"
   },
-  "main": "src/index.d.ts",
+  "main": "src/types.d.ts",
   "author": "Matan Lurey",
   "keywords": [
     "Tabletop",
